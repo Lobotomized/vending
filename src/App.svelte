@@ -12,19 +12,22 @@
 
   const addItem = function(e) {
     totalPrice += Number(parseFloat(e.detail.price).toFixed(2));
+    totalPrice = Number(totalPrice.toFixed(2));
   };
   const removeItem = function(e) {
+    console.log(parseFloat(e.detail.price).toFixed(2));
     totalPrice -= Number(parseFloat(e.detail.price).toFixed(2));
+    totalPrice = Number(totalPrice.toFixed(2));
   };
 </script>
 
 <style>
   main {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
   }
 
-  .container{
+  .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -35,22 +38,22 @@
     flex-direction: row;
     text-align: center;
     justify-content: flex-end;
-    margin-right:250px;
+    margin-right: 250px;
   }
-  h1{
-    margin-left:10px;
+  h1 {
+    margin-left: 10px;
   }
-  .checkout{
-    background:purple;
-    color:white;
-    font-size:16px;
-    border:none;
-    padding:16px;
-    border-radius:10px;
+  .checkout {
+    background: purple;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
   }
 
-  .totalPrice{
-    padding-right:150px;
+  .totalPrice {
+    padding-right: 150px;
   }
 </style>
 
